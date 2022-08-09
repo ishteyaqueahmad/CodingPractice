@@ -1,4 +1,8 @@
 package com.practice;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /*
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -23,4 +27,20 @@ public class SumOfTwoNumbers {
         }
         return nums;
     }   */
+
+    /*
+    Let's solve it in O(n) time */
+    Map<Integer,Integer> complement=new HashMap<>();
+    public int[] twoSum(int[] nums,int target){
+        for(int i=0;i<nums.length;i++){
+            Integer complementIndex=complement.get(nums[i]);
+            if (complementIndex!=null){
+                return new int[]{i,complementIndex};
+            }
+            else {
+                complement.put(target-nums[i],i);
+            }
+        }
+        return nums;
+    }
 }
