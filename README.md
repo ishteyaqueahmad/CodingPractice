@@ -1,3 +1,3 @@
 ## CodingPractice
 
-# Practicing coding for enhancing problem solving skill
+### Practicing coding for enhancing problem solving skill
